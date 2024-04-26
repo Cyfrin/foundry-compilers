@@ -1980,8 +1980,14 @@ mod tests {
         let out: CompilerOutput = serde_json::from_str(s).unwrap();
         assert_eq!(out.errors.len(), 1);
 
+        let out_converted = crate::compilers::CompilerOutput {
+            errors: out.errors,
+            contracts: Default::default(),
+            sources: Default::default(),
+        };
+
         let mut aggregated = AggregatedCompilerOutput::default();
-        aggregated.extend("0.8.12".parse().unwrap(), out);
+        aggregated.extend("0.8.12".parse().unwrap(), out_converted);
         assert!(!aggregated.is_unchanged());
     }
 
