@@ -485,16 +485,21 @@ impl<C> ProjectPathsConfig<C> {
             })
             .find_map(|r| {
                 import.strip_prefix(&r.name).ok().map(|stripped_import| {
-                    let lib_path = Path::new(&r.path).join(stripped_import);
+                    let mut lib_path = Path::new(&r.path).join(stripped_import);
 
                     // we handle the edge case where the path of a remapping ends with "contracts"
                     // (`<name>/=.../contracts`) and the stripped import also starts with
                     // `contracts`
-                    if let Ok(adjusted_import) = stripped_import.strip_prefix("contracts/") {
-                        if r.path.ends_with("contracts/") && !lib_path.exists() {
-                            return Path::new(&r.path).join(adjusted_import);
-                        }
+                    if r.path.ends_with("contracts/") && stripped_import.starts_with("contracts/") && lib_path.exists() {
+                        println!("INFO config.rs resolve_library_import Corrected path to avoid duplication");
+                        return Path::new(&r.path).join(stripped_import.strip_prefix("contracts/").unwrap());
                     }
+                    
+                    // Trim trailing slash if not a directory
+                    if !lib_path.is_dir() && lib_path.display().to_string().ends_with('/') {
+                        lib_path = PathBuf::from(lib_path.display().to_string().trim_end_matches('/'));
+                    }
+
                     lib_path
                 })
             })
