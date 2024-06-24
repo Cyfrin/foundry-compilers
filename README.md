@@ -25,7 +25,7 @@ When updating this, also update:
 
 Foundry Compilers will keep a rolling MSRV (minimum supported rust version) policy of **at
 least** 6 months. When increasing the MSRV, the new Rust version must have been
-released at least six months ago. The current MSRV is 1.65.0.
+released at least six months ago. The current MSRV is 1.70.0.
 
 Note that the MSRV is not increased automatically, and only as part of a minor
 release.
@@ -50,13 +50,13 @@ foundry-compilers = { git = "https://github.com/foundry-rs/compilers" }
 
 Example usage:
 
-```rust
+```rust,ignore
 use foundry_compilers::{Project, ProjectPathsConfig};
 
 // configure the project with all its paths, solc, cache etc.
 let project = Project::builder()
     .paths(ProjectPathsConfig::hardhat(env!("CARGO_MANIFEST_DIR")).unwrap())
-    .build()
+    .build(Default::default())
     .unwrap();
 let output = project.compile().unwrap();
 

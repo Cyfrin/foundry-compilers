@@ -5,12 +5,182 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.8.0](https://github.com/foundry-rs/compilers/releases/tag/v0.8.0) - 2024-06-17
+
+### Bug Fixes
+
+- [flatten] Small bugs ([#153](https://github.com/foundry-rs/compilers/issues/153))
+
+### Miscellaneous Tasks
+
+- Rename foundry-compilers-project into foundry-compilers ([#152](https://github.com/foundry-rs/compilers/issues/152))
+- Clippy
+- Move lints to workspace ([#149](https://github.com/foundry-rs/compilers/issues/149))
+- Remove unused files and workflow ([#148](https://github.com/foundry-rs/compilers/issues/148))
+
+### Other
+
+- Sync workflows
+
+### Performance
+
+- Cache --version output ([#144](https://github.com/foundry-rs/compilers/issues/144))
+
+### Refactor
+
+- [flatten] Move compilation logic into `Flattener` ([#143](https://github.com/foundry-rs/compilers/issues/143))
+- Extract artifacts to a separate crate ([#142](https://github.com/foundry-rs/compilers/issues/142))
+
+### Testing
+
+- Use similar-asserts ([#145](https://github.com/foundry-rs/compilers/issues/145))
+
+## [0.7.0](https://github.com/foundry-rs/compilers/releases/tag/v0.7.0) - 2024-06-11
+
+### Bug Fixes
+
+- Always fix windows line endings ([#139](https://github.com/foundry-rs/compilers/issues/139))
+
+### Features
+
+- Track and cache context of each compiler invocation ([#140](https://github.com/foundry-rs/compilers/issues/140))
+
+### Miscellaneous Tasks
+
+- Release 0.7.0
+
+## [0.6.2](https://github.com/foundry-rs/compilers/releases/tag/v0.6.2) - 2024-06-06
+
+### Bug Fixes
+
+- Better tracking of cache entries ([#138](https://github.com/foundry-rs/compilers/issues/138))
+
+### Miscellaneous Tasks
+
+- Release 0.6.2
+
+## [0.6.1](https://github.com/foundry-rs/compilers/releases/tag/v0.6.1) - 2024-06-05
+
+### Bug Fixes
+
+- Small sparse output updates ([#137](https://github.com/foundry-rs/compilers/issues/137))
+- Version resolution ([#136](https://github.com/foundry-rs/compilers/issues/136))
+- Vyper 0.4 support ([#134](https://github.com/foundry-rs/compilers/issues/134))
+
+### Miscellaneous Tasks
+
+- Release 0.6.1
+- Sync cliff.toml
+
+### Refactor
+
+- Sparse output ([#135](https://github.com/foundry-rs/compilers/issues/135))
+
+## [0.6.0](https://github.com/foundry-rs/compilers/releases/tag/v0.6.0) - 2024-06-03
+
+### Dependencies
+
+- [deps] Bump itertools ([#133](https://github.com/foundry-rs/compilers/issues/133))
+
+### Features
+
+- Allow multiple languages for compilers ([#128](https://github.com/foundry-rs/compilers/issues/128))
+
+### Miscellaneous Tasks
+
+- Release 0.6.0
+
+## [0.5.2](https://github.com/foundry-rs/compilers/releases/tag/v0.5.2) - 2024-06-01
+
+### Features
+
+- Make CompactContractBytecodeCow implement Artifact ([#130](https://github.com/foundry-rs/compilers/issues/130))
+
+### Miscellaneous Tasks
+
+- Release 0.5.2
+- Clippy ([#132](https://github.com/foundry-rs/compilers/issues/132))
+
+### Performance
+
+- Reduce size of source map ([#131](https://github.com/foundry-rs/compilers/issues/131))
+
+## [0.5.1](https://github.com/foundry-rs/compilers/releases/tag/v0.5.1) - 2024-05-23
+
+### Bug Fixes
+
+- Update vyper path resolution logic ([#127](https://github.com/foundry-rs/compilers/issues/127))
+- Relax trait bounds ([#126](https://github.com/foundry-rs/compilers/issues/126))
+
+### Miscellaneous Tasks
+
+- Release 0.5.1
+
+## [0.5.0](https://github.com/foundry-rs/compilers/releases/tag/v0.5.0) - 2024-05-21
+
+### Features
+
+- Vyper imports parser ([#125](https://github.com/foundry-rs/compilers/issues/125))
+
+### Miscellaneous Tasks
+
+- Release 0.5.0
+- Swap generics on `Project` ([#124](https://github.com/foundry-rs/compilers/issues/124))
+
+## [0.4.3](https://github.com/foundry-rs/compilers/releases/tag/v0.4.3) - 2024-05-13
+
+### Bug Fixes
+
+- Re-enable yul settings sanitization ([#122](https://github.com/foundry-rs/compilers/issues/122))
+
+### Miscellaneous Tasks
+
+- Release 0.4.3
+
+## [0.4.2](https://github.com/foundry-rs/compilers/releases/tag/v0.4.2) - 2024-05-13
+
+### Bug Fixes
+
+- Do not remove dirty artifacts from disk ([#123](https://github.com/foundry-rs/compilers/issues/123))
+
+### Miscellaneous Tasks
+
+- Release 0.4.2
+
+## [0.4.1](https://github.com/foundry-rs/compilers/releases/tag/v0.4.1) - 2024-05-07
+
+### Bug Fixes
+
+- Absolute paths in build info ([#121](https://github.com/foundry-rs/compilers/issues/121))
+
+### Features
+
+- Add a few Solc install helpers back ([#120](https://github.com/foundry-rs/compilers/issues/120))
+
+### Miscellaneous Tasks
+
+- Release 0.4.1
+
+## [0.4.0](https://github.com/foundry-rs/compilers/releases/tag/v0.4.0) - 2024-05-03
+
+### Features
+
+- Compiler abstraction ([#115](https://github.com/foundry-rs/compilers/issues/115))
+
+### Miscellaneous Tasks
+
+- Release 0.4.0
+
 ## [0.3.20](https://github.com/foundry-rs/compilers/releases/tag/v0.3.20) - 2024-04-30
 
 ### Bug Fixes
 
 - Short-circuit symlink cycle ([#117](https://github.com/foundry-rs/compilers/issues/117))
 - Add checks for != root folder ([#116](https://github.com/foundry-rs/compilers/issues/116))
+
+### Miscellaneous Tasks
+
+- Release 0.3.20
 
 ## [0.3.19](https://github.com/foundry-rs/compilers/releases/tag/v0.3.19) - 2024-04-22
 
@@ -181,13 +351,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.3.5](https://github.com/foundry-rs/compilers/releases/tag/v0.3.5) - 2024-02-10
 
+### Bug Fixes
+
+- Fix `DoWhileStatement` AST ([#74](https://github.com/foundry-rs/compilers/issues/74))
+
 ### Miscellaneous Tasks
 
 - Release 0.3.5
-
-### Other
-
-- Fix `DoWhileStatement` AST ([#74](https://github.com/foundry-rs/compilers/issues/74))
 
 ## [0.3.4](https://github.com/foundry-rs/compilers/releases/tag/v0.3.4) - 2024-02-09
 
